@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <parameter name="LN" value="Sridhar"/>
+  <parameter name="FN" value="Mithra"/>
+  <parameter name="CN" value="AON"/>
+  <test name="Test(failed)" parallel="none">
+    <parameter name="LN" value="Sridhar"/>
+    <parameter name="FN" value="Mithra"/>
+    <parameter name="CN" value="AON"/>
+    <classes>
+      <class name="session9.TestCase1">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="beforeTest"/>
+          <include name="setData"/>
+          <include name="afterSuite"/>
+          <include name="testCase1" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- session9.TestCase1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
