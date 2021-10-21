@@ -21,9 +21,9 @@ public class GenericWrappers implements Wrappers {
 
 	public void invokeApp(String browser, String Url) {
 
-		try {
+		try {		
 			if (browser.equalsIgnoreCase("Chrome")) {
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 				driver = new ChromeDriver();
 			} else {
 				System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
@@ -36,7 +36,7 @@ public class GenericWrappers implements Wrappers {
 			System.out.println("The browser " + browser + " launched successfully.");
 
 		} catch (WebDriverException e) {
-			System.out.println("The browser " + browser + " failed to launch.");
+			System.out.println("The browser " + browser + " failed to launch." +e);
 
 		} finally {
 			takeSnap();
@@ -230,7 +230,6 @@ public class GenericWrappers implements Wrappers {
 		} catch (NoSuchElementException e) {
 			System.out.println("The Text field with attribute as id - " + xpathVal + " is not found.");
 		}
-
 	}
 
 	public String getTextById(String idVal) {

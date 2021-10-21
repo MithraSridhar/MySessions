@@ -4,27 +4,37 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SimpleLogin {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	public static void main(String[] args) throws InterruptedException {
 		
 		//Step 1: Launch Chrome
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+
+		ChromeDriver driver = new ChromeDriver(); 
 		
 		//Step 2: Maximize window
 		driver.manage().window().maximize();
+		Thread.sleep(3000);
 		
 		//Step 3: Load URL
-		driver.get("http://thedemosite.co.uk/login.php");
+		driver.get("https://www.linkedin.com/login");
+		Thread.sleep(3000);
 		
 		//Step 4: Enter Username
-		driver.findElementByName("username").sendKeys("test");
+		driver.findElementById("username").sendKeys("test");
+
+		Thread.sleep(3000);
 		
 		//Step 5: Enter password
-		driver.findElementByName("password").sendKeys("test");
+		driver.findElementById("password").sendKeys("test");
+		Thread.sleep(3000);
 		
 		//Step 6: Click submit
-		driver.findElementByName("FormsButton2").click();
+		driver.findElementByXPath("//button[@type='submit']").click();
+		Thread.sleep(3000);
+		
+		//Step 7: Close browser
+		driver.quit();
 		
 		System.out.println("Success");
 

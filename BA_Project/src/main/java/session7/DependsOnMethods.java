@@ -10,7 +10,7 @@ public class DependsOnMethods {
 		throw new RuntimeException();
 	}
 
-	@Test(dependsOnMethods = "session7.DependsOnMethods.createLead",alwaysRun=true)
+	@Test(dependsOnMethods = "session7.DependsOnMethods.createLead", alwaysRun = true)
 	public void editLead() {
 		System.out.println("editLead");
 	}

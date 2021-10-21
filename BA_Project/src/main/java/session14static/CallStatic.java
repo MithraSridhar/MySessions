@@ -14,7 +14,7 @@ public class CallStatic {
 		CheckStatic txt = new CheckStatic();
 		txt.test();
 		System.out.println(CheckStatic.color);		
-		System.out.println();
+		//System.out.println();
 
 	}
 

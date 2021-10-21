@@ -28,11 +28,12 @@ public class ClassAImplementsInterfaceA implements InterfaceA{
 		
 	}
 	//Method implemented from interfaceA
-	public void mul(int a, int b) {
-		int mul = a*b;
-		System.out.println("Mul is "+mul);
-		
-	}
+	
+	  public void mul(int a, int b) { int mul = a*b;
+	  System.out.println("Mul is "+mul);
+	  
+	  }
+	 
 	// Class A own method
 	public void div(int a, int b){
 		int div = a/b;

@@ -3,10 +3,9 @@ package session4;
 public class OverridingSubClassPerson extends OverridingBaseClassHuman{
 	
 	//without over riding , using same mehtod from base class
-/*	public static void main(String[] args) 
-	{
-		 speak();
-	}*/
+	/*
+	 * public static void main(String[] args) { speak(); walk(); }
+	 */
 	
 	// over riding base class methods
 

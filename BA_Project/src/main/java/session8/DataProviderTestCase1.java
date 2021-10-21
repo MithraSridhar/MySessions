@@ -26,8 +26,8 @@ public class DataProviderTestCase1 extends GenericWrappers {
 		closeAllBrowsers();
 	}
 	
-	//@DataProvider(name="fetchData",parallel=true)
-	@DataProvider(name="fetchData")
+	@DataProvider(name="fetchData",parallel=true)
+	//@DataProvider(name="fetchData")
 	public String[][] getData() {
 		String[][] data = new String[3][4];
 		data[0][0]="ABC";

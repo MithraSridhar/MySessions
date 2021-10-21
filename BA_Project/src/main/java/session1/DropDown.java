@@ -7,32 +7,49 @@ import org.openqa.selenium.support.ui.Select;
 public class DropDown {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
+
 		// Step 1: Launch Chrome
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
-		
+
 		// Step 2: Maximize window
 		driver.manage().window().maximize();
+
+		// Step 3: Load URL
+		driver.get("http://the-internet.herokuapp.com/dropdown");
+		Thread.sleep(2000);
+
+		//Step 4: Identifying and saving drop down web element
+		WebElement dropdown = driver.findElementByXPath("//select[@id='dropdown']");
+
+		//Step 5: Creating object for select class using drop down web element
+		Select option = new Select(dropdown);
+
+		//Step 6: Choosing drop down options in 3 ways
+		//Step 7a: Choosing drop down using index
+		option.selectByIndex(1);
+		Thread.sleep(3000);
 		
-		//Step 3: Load URL
-		driver.get("http://book.theautomatedtester.co.uk/chapter1");
+		//Step 7b: Choosing drop down using value
+		option.selectByValue("2");
+		Thread.sleep(3000);
 		
-		//Step4: Select drop down
-				//Storing the element as the webelement using WebElement class
-				WebElement source = driver.findElementById("selecttype");
-				//converting it to dropdown element using Select class
-				Select dropdown =new Select(source);
-				Thread.sleep(2000);
-				dropdown.selectByIndex(1);
-				Thread.sleep(3000);
-				dropdown.selectByValue("Selenium RC");
-				Thread.sleep(3000);
-				dropdown.selectByVisibleText("Selenium Grid");
-				Thread.sleep(2000);
-				System.out.println("Success");
-				driver.quit();
+		//Step 7c: Choosing drop down using visible text		
+		option.selectByVisibleText("Option 1");
+		Thread.sleep(3000);
+		
+		//To deselect all the preselected options
+		/*
+		 * option.deselectByVisibleText("Option 1"); Thread.sleep(3000);
+		 */
+		
+		//Step 8: Printing success
+		System.out.println("Success");
+
+		//Step 9: Closing the browser
+		driver.close();
+
 	}
 
 }
+

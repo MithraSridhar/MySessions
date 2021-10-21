@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -19,14 +20,15 @@ public class ScrollDown {
 
 	public static void main(String[] args) throws InterruptedException, AWTException {
 		// opening Firefox browser
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		// maximize the browser
 		driver.manage().window().maximize();
-		
+		//driver.findElement(By.xpath("")).getLocation();
 //		WebDriverEventListener
 		// load the browser with url
 		driver.get("http://my.naukri.com/manager/createacc2.php?&othersrcp=7304&wExp=N&gclid=CjwKEAiAmY-3BRDh7pjvg46p1iYSJADQ78gNKinI8UQq81_b394vuaJHgRSuZFAljcR667JrhsxmBhoCMz_w_wcB");
+		Thread.sleep(3000);
 		
 		((JavascriptExecutor) driver).executeScript("scroll(0,1050);");
 		((RemoteWebDriver) driver).getScreenshotAs(OutputType.FILE);

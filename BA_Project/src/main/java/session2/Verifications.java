@@ -11,11 +11,11 @@ public class Verifications {
 		
 		// Step1: Launch Chrome
 		
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 				ChromeDriver driver = new ChromeDriver();
 						
 		//Step2: Load URL
-				driver.get("http://thedemosite.co.uk/login.php");
+				driver.get("https://www.linkedin.com/login");
 				
 		//Step3: Maximize window
 				driver.manage().window().maximize();
@@ -30,16 +30,16 @@ public class Verifications {
 				String Pagesource = driver.getPageSource();
 				
 		//Step7: Get Attribute
-				WebElement element = driver.findElementByName("username");
+				WebElement element = driver.findElementByName("session_key");
 				String Attribute = element.getAttribute("name");
-				String text1 = element.getText();
-				
+								
 		//Step8: Get CSS value
-				String CSS = element.getCssValue("font");
+				WebElement element1 = driver.findElementByXPath("//code[@id='consumer_login__text_plain__no_username']");
+				String CSS = element1.getCssValue("style");
 				
 		//Step9: Get text
-				WebElement element1 = driver.findElementByLinkText("Click here to view the PHP and JavaScript code");
-		        String text = element1.getText();
+				WebElement text = driver.findElementByXPath("//label[@class='form__label--floating']");
+				String text1 = text.getText();
 		        
 		//Step10: Get location
 		        Point location = element.getLocation();
@@ -51,6 +51,9 @@ public class Verifications {
 		        String tagname = element.getTagName();
 		        
        //Step13: Print all outputs
+		        
+		        System.out.println(driver.getTitle());
+		        
 				System.out.println("Title is :" +Title);
 				System.out.println("URL is :" +URL);
 				System.out.println("Page source is :" +Pagesource);
@@ -64,7 +67,6 @@ public class Verifications {
 				
 	   //Step14: Close browser and driver instance
 				driver.close();
-				driver.quit();
 			}
 
 }

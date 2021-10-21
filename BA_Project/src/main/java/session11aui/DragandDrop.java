@@ -23,7 +23,7 @@ public class DragandDrop {
 			
 			
 			Actions builder = new Actions(driver);
-			builder.dragAndDrop(draggable, droppable).perform();
+			builder.dragAndDrop(draggable, droppable).build().perform();
 		
 			
 			

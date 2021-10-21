@@ -7,7 +7,7 @@ public class ParallelRun {
 	
 	@Test
 	public void test1(){
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -18,7 +18,7 @@ public class ParallelRun {
 
 	@Test
 	public void test2(){
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.manage().window().maximize();

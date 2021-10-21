@@ -14,14 +14,14 @@ public class CompileTimeException {
 	@Test
 	
 	//Handling specific exceptions
-	public void exception() throws InterruptedException, IOException      {
+	public void exception() throws Exception  {
 		
 		//Handling exception using super class Exception
 		//	public void exception() throws Exception      {
 		
 		// Step1: Launch chrome
 
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 
 		driver = new ChromeDriver();
 		// Step2: Load URL
@@ -29,6 +29,7 @@ public class CompileTimeException {
 
 		// Step3: Window maximize
 		driver.manage().window().maximize();
+		
 		Thread.sleep(3000);
 
 		// Step4: Take screen shot

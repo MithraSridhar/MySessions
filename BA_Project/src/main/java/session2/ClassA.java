@@ -2,9 +2,15 @@ package session2;
 
 public class ClassA {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void m1() {
+		System.out.println("A");
+	}
+	
+	public static void m2() {
 
 	}
+
+	
+
 
 }

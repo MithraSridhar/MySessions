@@ -7,18 +7,19 @@ public class TestNGGroupingDependency {
 
 	@Test(groups = "smoke")
 	public void m1() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
 		driver.close();
 		driver.quit();
 		System.out.println("m1");
+		throw new RuntimeException();
 	}
 
 	@Test(groups = "smoke")
 	public void m2() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -29,7 +30,7 @@ public class TestNGGroupingDependency {
 
 	@Test(groups = "sanity", dependsOnGroups = "smoke")
 	public void m3() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -40,7 +41,7 @@ public class TestNGGroupingDependency {
 
 	@Test(groups = "sanity", dependsOnGroups = "smoke")
 	public void m4() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -51,7 +52,7 @@ public class TestNGGroupingDependency {
 
 	@Test(groups = "regression", dependsOnGroups = "sanity")
 	public void m5() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -62,7 +63,7 @@ public class TestNGGroupingDependency {
 
 	@Test(groups = "regression", dependsOnGroups = "sanity")
 	public void m6() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/");
 		driver.manage().window().maximize();

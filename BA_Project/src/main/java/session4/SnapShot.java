@@ -1,5 +1,6 @@
 package session4;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +18,7 @@ public class SnapShot {
 	public void snap() throws IOException {
 		// Step1: Launch chrome
 
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 
 		driver = new ChromeDriver();
 		// Step2: Load URL
@@ -28,18 +29,19 @@ public class SnapShot {
 
 		// Step4: Take screen shot
 
-		/*// Take screen shot and save it to file name src
-		File src = driver.getScreenshotAs(OutputType.FILE);
-
-		// create new file dest in the project folder to copy the screen shot taken
-		File destFile = new File("./reports/images/snap.jpg");
-
-		// Copy file from src to dest file created inside project folder
-		FileUtils.copyFile(src, destFile);*/
-
-		takeSnap();
-		driver.get("http://thedemosite.co.uk/login.php");
-		takeSnap();
+		
+		  // Take screen shot and save it to file name src File src =
+		File src =  driver.getScreenshotAs(OutputType.FILE);
+		  
+		  // create new file dest in the project folder to copy the screen shot taken
+		  File destFile = new File("./reports/images/snap.jpg");
+		  
+		  // Copy file from src to dest file created inside project folder
+		  FileUtils.copyFile(src, destFile);
+		  
+	//	takeSnap();
+		//driver.get("http://thedemosite.co.uk/login.php");
+	//	takeSnap();
 		
 		// Step5: Close browser
 		driver.close();
@@ -47,8 +49,10 @@ public class SnapShot {
 
 	}
 
-	public static long takeSnap() throws WebDriverException, IOException {
+	public static long takeSnap() throws WebDriverException, IOException{
+		//random file name generator 
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L;
+		
 		FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE), new File("./reports/images/" + number + ".jpg"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return number;

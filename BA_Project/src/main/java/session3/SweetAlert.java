@@ -1,6 +1,5 @@
 package session3;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -8,22 +7,21 @@ public class SweetAlert {
 
 	public static void main(String[] args) throws InterruptedException {
 		// 1. Launch chrome web browser
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		ChromeDriver driver = new ChromeDriver();
 
 		// 2. Synchronization and Maximize
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 
-		// Load URL                 
+		// Load URL
 		driver.get("https://sweetalert.js.org/guides/#getting-started");
-		//Click preview
+		// Click preview
 		driver.findElementByClassName("preview").click();
-		//driver.findElementByClassName("swal-button swal-button--confirm").click();
+
 		Thread.sleep(3000);
-		//Click OK on sweet alert
+		// Click OK on sweet alert
 		driver.findElementByXPath("//button[contains(text(),'OK')]").click();
-		
+
 		driver.close();
 	}
 

@@ -39,9 +39,13 @@ public class LearnArrays {
 		System.out.println(tests[5]);
 
 		// Filling an array to place a specific value at each index 
-		Arrays.fill(tests, "Test7");
+		Arrays.fill(tests, 0, 4, "Test9");
+	//	Arrays.fill(tests, "Test7");
 		System.out.println(tests[0]);
-
+		System.out.println(tests[1]);
+		System.out.println(tests[2]);
+		System.out.println(tests[3]);
+		System.out.println(tests[4]);
 
 		// Another way of creating
 		int[] weeks = {1,2,3,4,5,6,11,7,9};

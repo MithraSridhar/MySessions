@@ -43,6 +43,7 @@ public class LearnString {
 		System.out.println("Memory address of a: "+ System.identityHashCode(a));
 
 		a = a.concat(" Company");
+		
 		System.out.println("Memory address of a: "+ System.identityHashCode(a));
 
 		

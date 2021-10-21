@@ -8,24 +8,31 @@ public class HoverActions {
 
 		public static void main(String[] args) throws InterruptedException {			
 			
-			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 			ChromeDriver driver=new ChromeDriver();
-			driver.get("https://www.flipkart.com/");
+			driver.get("https://www.amazon.com/");
 			driver.manage().window().maximize();
-			driver.findElementByXPath("//button[@class='_2AkmmA _29YdH8']").click();
-			WebElement ele = driver.findElementByXPath("//span[contains(text(),'Electronics')]");			
+			
+			//driver.findElementByXPath("//button[@class='_2AkmmA _29YdH8']").click();
+			
+			WebElement ele = driver.findElementByXPath("//span[contains(text(),'Account & Lists')]");			
+			
 			Actions builder = new Actions(driver);
+			
 			builder.moveToElement(ele).build().perform();
 			Thread.sleep(3000);			
-			WebElement mobiles = driver.findElementByXPath("//span[contains(text(),'Mobiles')]");
 			
-			builder.click(mobiles).build().perform();
+			  WebElement flag = driver.findElementByXPath("//span[@class='icp-nav-flag icp-nav-flag-us']");
+			  
+			  builder.moveToElement(flag).build().perform();
+				Thread.sleep(3000);	
+				
 			System.out.println("success");
 			
 			
 			
 			
-			
+				
 			
 			
 			

@@ -11,11 +11,19 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
 public class Annotations {
-
+	
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("beforeSuite");
+	}
 
 	@BeforeClass
 	public void beforeClass() {
 		System.out.println("beforeClass");
+	}
+	@BeforeTest
+	public void beforeTest() {
+		System.out.println("beforeTest");
 	}
 
 	@BeforeMethod
@@ -52,14 +60,6 @@ public class Annotations {
 		System.out.println("afterSuite");
 	}
 
-	@BeforeSuite
-	public void beforeSuite() {
-		System.out.println("beforeSuite");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		System.out.println("beforeTest");
-	}
+	
 
 }

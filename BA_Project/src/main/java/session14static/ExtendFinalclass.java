@@ -1,5 +1,5 @@
 package session14static;
 
-public class ExtendFinalclass /*extends CheckFinal*/{
+public class ExtendFinalclass /* extends CheckFinal */{
 
 }

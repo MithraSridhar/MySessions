@@ -10,7 +10,7 @@ public class Selectable {
 		@SuppressWarnings("unused")
 		public static void main(String[] args) throws InterruptedException {			
 			
-			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 			ChromeDriver driver=new ChromeDriver();
 			driver.get("http://jqueryui.com/selectable/");
 			driver.manage().window().maximize();			
@@ -31,14 +31,12 @@ public class Selectable {
 			//builder.clickAndHold(element1).release(element7).build().perform();
 			
 			
-			builder.keyDown(Keys.CONTROL)
-			.click(element1)
-			.click(element3)
-			.click(element5)
-			.click(element7)
-			.keyUp(Keys.CONTROL)
-			.build().perform();						
-			builder.contextClick().perform();
+			
+			  builder.keyDown(Keys.CONTROL) .click(element1) .click(element3)
+			  .click(element5) .click(element7) .keyUp(Keys.CONTROL) .build().perform();
+			 
+			  builder.contextClick().perform();
+			 
 			
 	}
 

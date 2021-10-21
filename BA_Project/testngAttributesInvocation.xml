@@ -5,8 +5,9 @@
     <classes>
       <class name="session7.AttributesInvocation"/> 
        <methods>
-     <include name="invocationCountTimeout"></include>
-      </methods>  
+     <include name="invocationCountTimeout">
+     </include>
+      </methods>       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

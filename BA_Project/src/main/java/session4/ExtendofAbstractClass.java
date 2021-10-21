@@ -9,16 +9,17 @@ public class ExtendofAbstractClass extends AbstractClass{
 		sum();
 		sub();
 	}
-
-	@Override
-	public  void sum() {
-		System.out.println("SUM");		
-	}
-
-	@Override
-	public void sub() {
-		System.out.println("SUB");
-			
-	}
+	
+	  @Override 
+	  public void sum() {
+		  System.out.println("SUM");
+		  }
+	  
+	 @Override 
+	  public void sub() { 
+		  System.out.println("SUB");
+	  
+	  }
+	 
 
 }

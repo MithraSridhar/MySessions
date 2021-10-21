@@ -40,5 +40,12 @@ public static void addN(int a, int b, int c, String s){
 	System.out.println("The value of String is "+s);
 	
 }
+public static void addN(int a, int b, int c, String s,String m){
+	
+	int d = a +b+c;
+	System.out.println("The value of D is "+d);
+	System.out.println("The value of String is "+s);
+	
+}
 
 }

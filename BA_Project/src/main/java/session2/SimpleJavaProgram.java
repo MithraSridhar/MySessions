@@ -11,6 +11,7 @@ public class SimpleJavaProgram {
 		sum = num+a+b+c;
 		System.out.println("The sum is " +sum);
 		sum1();
+		sum(5,6);
 	}
 	
 	
@@ -29,8 +30,21 @@ public class SimpleJavaProgram {
      public static void sum(int a, int b){
     		sum=num+a+a+b;
     	}
+   //over loading
+     public static void sum(String a, String b){
+    	//	sum=num+a+a+b;
+    	}
+     
+     //over loading
+     public static void sum(int a, String b){
+    	//	sum=num+a+a+b;
+    	}
      //over loading
      public static void sum(int a, int b,int c){
  		sum=num+a+a+b+c;
  	}
+     
+     public static void sum(int a, int b,int c,int d){
+  		sum=num+a+a+b+c;
+  	}
 }

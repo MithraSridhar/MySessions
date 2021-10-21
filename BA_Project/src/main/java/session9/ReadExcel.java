@@ -24,6 +24,7 @@ public class ReadExcel {
 
 		int rowCount = sheet1.getLastRowNum();
 		int columnCount = sheet1.getRow(0).getLastCellNum();
+		
 		System.out.println("Row Count: "+rowCount);		
 		System.out.println("Column Count: "+columnCount);
 		// go to the row

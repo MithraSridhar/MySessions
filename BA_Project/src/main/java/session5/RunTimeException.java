@@ -15,34 +15,37 @@ public class RunTimeException {
 	
 	static ChromeDriver driver;
 	@Test
-	public void runTimeException() throws Exception {
+	public void runTimeException() throws WebDriverException, IOException  {
 
 		// Step 1: Launch Chrome
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 		driver = new ChromeDriver();
 
 		// Step 2: Maximize window
 		driver.manage().window().maximize();
 
 		// Step 3: Load URL
-		driver.get("http://opensource.demo.orangehrmlive.com/index.php/leave/assignLeave");
+		driver.get("https://www.linkedin.com/login");
 
 		// Step 4: Enter Username		
 		try {
-			driver.findElementByName("txtUsername").sendKeys("admin");
+			driver.findElementById("username").sendKeys("test");
 			//To throw new user defined exception
 			throw new Exception("My test is FAILED");
-		} catch (NoSuchElementException e) {
-			System.out.println("Exception is "+e);
-		} catch (Exception e) {
+		} 
+		catch (NoSuchElementException e) {
+			System.out.println("Exception is " +e);
+		} 
+		catch (Exception e) {
 			System.out.println(e);
-		} finally {
+		} 
+		finally {
 			takeSnap();
 		}
 		
 		// Step 5: Enter password
 		try {
-			driver.findElementByName("txtPassword").sendKeys("admin");
+			driver.findElementById("password").sendKeys("test");
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
 		} catch (Exception e) {
@@ -52,7 +55,7 @@ public class RunTimeException {
 		}
 		// Step 6: Click submit
 		try {
-			driver.findElementByName("Submit").click();
+			driver.findElementByXPath("//button[@type='submit']").click();
 		} catch (NoSuchElementException e) {
 			System.out.println(e);
 		} catch (Exception e) {
@@ -71,5 +74,7 @@ public class RunTimeException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return number;
 	}
+	
+	
 
 }

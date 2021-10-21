@@ -45,12 +45,13 @@ public class LearnHashTable {
 		
 		// Add tests to the map (note the order)
 		tests.put(5,"Test1");
+		//tests.put(5,"Test0");
 		tests.put(2,"Test2");
 		tests.put(4,"Test3");
 		tests.put(6,"Test4");
 		tests.put(3,"Test5");
 		tests.put(1,"Test6");
-		tests.put(null,null);
+//		tests.put(null,null);
 
 		
 		

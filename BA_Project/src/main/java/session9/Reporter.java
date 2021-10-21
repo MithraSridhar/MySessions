@@ -29,7 +29,7 @@ public abstract class Reporter {
 					addScreenCapture("./../reports/images/"+snapNumber+".jpg"));
 		}else if(status.toUpperCase().equals("FAIL")){
 			test.log(LogStatus.FAIL, desc+test.addScreenCapture("./../reports/images/"+snapNumber+".jpg"));
-			throw new RuntimeException("FAILED");
+			//throw new RuntimeException("FAILED");
 		}else if(status.toUpperCase().equals("INFO")){
 			test.log(LogStatus.INFO, desc);
 		}
@@ -42,7 +42,7 @@ public abstract class Reporter {
 			test.log(LogStatus.PASS,desc);
 		}else if(status.toUpperCase().equals("FAIL")){
 			test.log(LogStatus.FAIL, desc);
-			throw new RuntimeException("FAILED");
+			//throw new RuntimeException("FAILED");
 		}else if(status.toUpperCase().equals("INFO")){
 			test.log(LogStatus.INFO, desc);
 		}

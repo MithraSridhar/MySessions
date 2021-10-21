@@ -6,7 +6,7 @@
 		<parameter name="Username" value="DemoSalesManager" />
 		<parameter name="Password" value="crmsfa" />
 		<classes>
-			<class name="session8.ParameterTestCase1" />
+			<class name="session8.ParameterTestCase1" />			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -8,7 +8,8 @@ public abstract class AbstractClass {
 		System.out.println("The value of sum is "+sum);
 
 	}
-	public  abstract void sum();
-	public  abstract void sub();
-
+	
+	  public abstract void sum(); 
+	  public abstract void sub();
+	 
 }

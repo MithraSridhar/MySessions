@@ -23,7 +23,7 @@ public class GenericWrappers implements Wrappers {
 
 		try {
 			if (browser.equalsIgnoreCase("Chrome")) {
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
 				driver = new ChromeDriver();
 			} else {
 				System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");

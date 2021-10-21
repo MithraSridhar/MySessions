@@ -28,6 +28,7 @@ public class Inheritance extends SimpleJavaProgram{
 
 		
 	}
+	
 	//over ridding
 	  public static void sum(){
 			sum=num-a-b;

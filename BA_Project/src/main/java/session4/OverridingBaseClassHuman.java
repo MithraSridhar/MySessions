@@ -8,8 +8,9 @@ public class OverridingBaseClassHuman {
 		System.out.println("Human can understand all languages");
 
 	}
+	
 
-	public void walk() 
+	public  void walk() 
 	{
 		System.out.println("Human can walk");
 		System.out.println("Human can walk fast");
